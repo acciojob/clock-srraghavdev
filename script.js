@@ -1,9 +1,11 @@
 //your JS code here. If required.
+function timeCount(){
 let time=""
 let dater=""
 let f= document.getElementById("timer")
+getdate()
+getime()
 f.innerText= `${dater}, ${time}`
-setTimeout("getime()",1000)
 
 function getdate(){
 let d = new Date();
@@ -22,5 +24,7 @@ function getime(){
 	if(minute<10)minute = "0"+minute;
 	var second = today.getSeconds();
 	if(second<10)second = "0"+second;
-	time=`${hour}:${minute}:${second} ${cd}`	
+	time=`${hour}:${minute}:${second} ${cd}`
+	setTimeout("getime()",1000)
+}
 }
