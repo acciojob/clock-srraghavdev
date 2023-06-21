@@ -1,11 +1,14 @@
 //your JS code here. If required.
+let time=""
+let dater=""
 let f= document.getElementById("timer")
-f.innerText= `${getdate()}, ${getime()}`
+f.innerText= `${dater}, ${time}`
+setTimeout("getime()",1000)
 
 function getdate(){
 let d = new Date();
 d=String(d.toISOString())
-return `${d.substring(8,10)}/${d.substring(5,7)}/${d.substring(0,4)}`	
+dater=`${d.substring(8,10)}/${d.substring(5,7)}/${d.substring(0,4)}`	
 }
 
 function getime(){
@@ -19,5 +22,5 @@ function getime(){
 	if(minute<10)minute = "0"+minute;
 	var second = today.getSeconds();
 	if(second<10)second = "0"+second;
-	return `${hour}:${minute}:${second} ${cd}`
+	time=`${hour}:${minute}:${second} ${cd}`	
 }
