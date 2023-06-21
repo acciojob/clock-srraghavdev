@@ -8,6 +8,7 @@ d=String(d.toISOString())
 return `${d.substring(8,10)}/${d.substring(5,7)}/${d.substring(0,4)}`	
 }
 function getime(){
+	let today = new Date()
 	var hour = today.getHours();
 	let cd="AM"
 	if(hour<10)hour = "0"+hour;
